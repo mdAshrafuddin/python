@@ -1,23 +1,15 @@
-class MyClass:
-    def __init__(self, name, company):
-        self.name = name
-        self.company = company
+class Rectangle:
+    def __init__(self, width, height):
+        print("I'm initializing a new Rectangle instance.")
+        self.width = width
+        self.height = height
     
-    def get_all(self):
-        return self.name, self.company
 
-    def set_all(self, name, company):
-        self.name = name
-        self.company = company
-    
-n = MyClass("Ashraf", "Ashraf.limit")
-print(f"My name is {n.name} and company name {n.company}")
-print("=" * 25)
-n.set_all("Tanjil Chowdhury", 'Chowdhry Company')
-print(f"{n.get_all()}")
+    def calculate_area(self):
+        return self.width * self.height
 
-n.counter = 1
-while n.counter < 40:
-    n.counter = n.counter * 2
-print(n.counter)
-del n.counter
+    def __del__(self):
+        print("This reactangle of delete")
+
+ob = Rectangle(3, 40)
+print(ob.calculate_area())
